@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #644f8c;
+    overflow: hidden;
+}
+
+.background span {
+    width: 13vmin;
+    height: 13vmin;
+    border-radius: 13vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #E45A84;
+    top: 23%;
+    left: 23%;
+    animation-duration: 23s;
+    animation-delay: -26s;
+    transform-origin: 2vw -21vh;
+    box-shadow: 26vmin 0 4.129209336798567vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #a979fb;
+    top: 50%;
+    left: 81%;
+    animation-duration: 8s;
+    animation-delay: -49s;
+    transform-origin: 16vw 10vh;
+    box-shadow: -26vmin 0 3.648730290247025vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #E45A84;
+    top: 80%;
+    left: 43%;
+    animation-duration: 41s;
+    animation-delay: -27s;
+    transform-origin: 6vw -9vh;
+    box-shadow: 26vmin 0 3.947279629862734vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #FFACAC;
+    top: 19%;
+    left: 71%;
+    animation-duration: 35s;
+    animation-delay: -26s;
+    transform-origin: -5vw -20vh;
+    box-shadow: -26vmin 0 3.288323217576622vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #E45A84;
+    top: 52%;
+    left: 29%;
+    animation-duration: 42s;
+    animation-delay: -41s;
+    transform-origin: 5vw 3vh;
+    box-shadow: 26vmin 0 3.480122703076912vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #E45A84;
+    top: 66%;
+    left: 79%;
+    animation-duration: 37s;
+    animation-delay: -4s;
+    transform-origin: 15vw -2vh;
+    box-shadow: 26vmin 0 3.635700207899517vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #E45A84;
+    top: 15%;
+    left: 63%;
+    animation-duration: 25s;
+    animation-delay: -1s;
+    transform-origin: 4vw -19vh;
+    box-shadow: -26vmin 0 3.584796293328304vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #FFACAC;
+    top: 48%;
+    left: 37%;
+    animation-duration: 53s;
+    animation-delay: -50s;
+    transform-origin: 12vw 7vh;
+    box-shadow: 26vmin 0 3.9513443334538447vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #a979fb;
+    top: 21%;
+    left: 96%;
+    animation-duration: 19s;
+    animation-delay: -48s;
+    transform-origin: 10vw -23vh;
+    box-shadow: 26vmin 0 4.2441706980752505vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #FFACAC;
+    top: 76%;
+    left: 87%;
+    animation-duration: 14s;
+    animation-delay: -17s;
+    transform-origin: -21vw 19vh;
+    box-shadow: 26vmin 0 3.673809245537306vmin currentColor;
+    
+}
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+
+* {
+
+  box-sizing: border-box;
+
+}
+#nav{
+  position: relative;
+  z-index: 1;
+}
+#bg{
+    background-color:white;
+    max-width:800px;
+    max-height:600px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+     <section id = "nav" class="text-gray-600 body-font relative">
+        <div id = "bg" class="container px-1 py-10 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Me</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Please fill the form given below so that I can contact you.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+              </div>
+             
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
